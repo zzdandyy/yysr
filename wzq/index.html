@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋人机对战</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ececec;
+            font-family: Arial, sans-serif;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(15, 30px);
+            grid-template-rows: repeat(15, 30px);
+            gap: 1px;
+            background-color: black;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .cell.taken {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>五子棋人机对战</h1>
+    <div id="board"></div>
+    <p id="status"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
